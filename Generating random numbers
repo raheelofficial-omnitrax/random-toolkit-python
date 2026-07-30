@@ -1,0 +1,126 @@
+"""
+Random Number Generator Toolkit
+================================
+
+A Python program demonstrating useful methods
+from the random module.
+
+Features:
+- Random integer generation
+- Random decimal generation
+- Random choice selection
+- List shuffling
+- Random card picker
+
+Author: Raheel Babar
+Version: 1.0
+"""
+
+import random
+
+
+# ==============================
+# Random Integer Generator
+# ==============================
+
+def generate_random_number(start, end):
+    """
+    Generates a random integer between start and end.
+    """
+    return random.randint(start, end)
+
+
+# ==============================
+# Random Float Generator
+# ==============================
+
+def generate_random_float():
+    """
+    Generates a random floating-point number
+    between 0.0 and 1.0.
+    """
+    return random.random()
+
+
+# ==============================
+# Random Choice Generator
+# ==============================
+
+def choose_random_option(options):
+    """
+    Selects a random item from a list or tuple.
+    """
+    return random.choice(options)
+
+
+# ==============================
+# Shuffle List Function
+# ==============================
+
+def shuffle_cards(cards):
+    """
+    Randomly rearranges items in a list.
+    """
+    random.shuffle(cards)
+    return cards
+
+
+# ==============================
+# Main Program
+# ==============================
+
+print("=" * 45)
+print("        RANDOM TOOLKIT v1.0")
+print("=" * 45)
+
+
+# Generate random number
+
+low = 1
+high = 100
+
+random_number = generate_random_number(low, high)
+
+print("\n🎲 Random Number:")
+print(random_number)
+
+
+# Generate random decimal
+
+random_float = generate_random_float()
+
+print("\n🔢 Random Decimal Number:")
+print(random_float)
+
+
+# Rock Paper Scissors Example
+
+game_options = (
+    "Rock",
+    "Paper",
+    "Scissors"
+)
+
+computer_choice = choose_random_option(game_options)
+
+print("\n🎮 Computer Choice:")
+print(computer_choice)
+
+
+# Card Shuffle Example
+
+cards = [
+    "2", "3", "4", "5",
+    "6", "7", "8", "9",
+    "10", "J", "Q", "K", "A"
+]
+
+shuffle_cards(cards)
+
+print("\n🃏 Shuffled Cards:")
+print(cards)
+
+
+print("\n" + "=" * 45)
+print("Program Completed Successfully ✅")
+print("=" * 45)
